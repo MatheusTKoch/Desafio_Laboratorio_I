@@ -27,7 +27,15 @@ public class Loja {
         return salarioBaseFuncionario;
     }
 
-    public void setNome() {
-        
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setQuantidadeFuncionarios(int quantidadeFuncionarios) {
+        this.quantidadeFuncionarios = quantidadeFuncionarios;
+    }
+
+    public void setSalarioBaseFuncionario(double salarioBaseFuncionario) {
+        this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
 }
