@@ -38,4 +38,26 @@ public class Loja {
     public void setSalarioBaseFuncionario(double salarioBaseFuncionario) {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
+
+    public String toString() {
+        return "Nome da loja: " + nome + ", quantidade de funcionarios: " + quantidadeFuncionarios + ". Salario Base dos Funcionarios: " + salarioBaseFuncionario;
+    }
+
+    public double gastosComSalario() {
+        if (salarioBaseFuncionario == -1) {
+            return -1;
+        } else {
+            return quantidadeFuncionarios * salarioBaseFuncionario;
+        }
+    }
+
+    public String tamanhoDaLoja() {
+        if (quantidadeFuncionarios < 10) {
+            return "P";
+        } else if (quantidadeFuncionarios >= 10 && quantidadeFuncionarios <= 30) {
+            return "M";
+        } else {
+            return "G";
+        }
+    }
 }
