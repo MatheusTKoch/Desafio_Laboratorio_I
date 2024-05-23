@@ -51,13 +51,13 @@ public class Loja {
         }
     }
 
-    public String tamanhoDaLoja() {
+    public char tamanhoDaLoja() {
         if (quantidadeFuncionarios < 10) {
-            return "P";
+            return 'P';
         } else if (quantidadeFuncionarios >= 10 && quantidadeFuncionarios <= 30) {
-            return "M";
+            return 'M';
         } else {
-            return "G";
+            return 'G';
         }
     }
 }
