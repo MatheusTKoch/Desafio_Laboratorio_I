@@ -15,6 +15,14 @@ public class Produto {
         return preco;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
     public String toString() {
         return "Nome do produto: " + nome + ", Preço de venda: " + preco;
     }
