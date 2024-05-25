@@ -2,11 +2,15 @@ public class Loja {
     private String nome;
     private int quantidadeFuncionarios;
     private double salarioBaseFuncionario;
+    private Endereco endereco;
+    private Data dataFundacao;
 
-    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario) {
+    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
+        this.endereco = endereco;
+        this.dataFundacao = dataFundacao;
     }
 
     public Loja(String nome, int quantidadeFuncionarios) {
