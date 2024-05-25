@@ -36,4 +36,14 @@ public class Produto {
     public String toString() {
         return "Nome do produto: " + nome + ", Preço de venda: " + preco;
     }
+
+    public boolean estaVencido(Data validade) {
+        if (dataValidade.getAno() < validade.getAno() || 
+        dataValidade.getAno() == validade.getAno() && dataValidade.getMes() < validade.getMes() ||
+        dataValidade.getAno() == validade.getAno() && dataValidade.getMes() == validade.getMes() && dataValidade.getDia() < validade.getDia()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
