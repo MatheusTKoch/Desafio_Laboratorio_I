@@ -31,6 +31,14 @@ public class Loja {
         return salarioBaseFuncionario;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public Data getDataFundacao() {
+        return dataFundacao;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -41,6 +49,14 @@ public class Loja {
 
     public void setSalarioBaseFuncionario(double salarioBaseFuncionario) {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setDataFundacao(Data dataFundacao) {
+        this.dataFundacao = dataFundacao;
     }
 
     public String toString() {
