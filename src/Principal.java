@@ -5,6 +5,8 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
 
+        //usar classe Teclado para refatorar o codigo abaixo ao pedir os inputs
+
         while (opcao !=3) {
             System.out.println("(1) criar uma loja");
             System.out.println("(2) criar um produto");
