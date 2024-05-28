@@ -17,6 +17,14 @@ public class Principal {
                 case 1:
                     System.out.println("Criação da loja");
                     System.out.println("Nome da Loja: ");
+                    String nome = scanner.next();
+                    System.out.println("Quantidade de funcionarios: ");
+                    int quantFunc = scanner.nextInt();
+                    System.out.println("Salario base dos funcionarios: ");
+                    double salBase = scanner.nextDouble();
+                    System.out.println("Endereco: ");
+                    String endereco = scanner.next();
+                    System.out.println("Loja cadastrada! Por favor cadastre um produto em seguida");
                     break;
                 case 2:
                     System.out.println("Criação do produto");
