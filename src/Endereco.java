@@ -1,5 +1,11 @@
 public class Endereco {
-    private String nomeDaRua, cidade, estado, pais, cep, numero, complemento;
+    private String nomeDaRua;
+    private String cidade; 
+    private String estado;
+    private String pais; 
+    private String cep;
+    private String numero;
+    private String complemento;
 
     public Endereco(String nomeDaRua, String cidade, String estado, String pais, String cep, String numero, String complemento) {
         this.nomeDaRua = nomeDaRua;
