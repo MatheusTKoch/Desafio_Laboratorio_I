@@ -22,8 +22,20 @@ public class Principal {
                     int quantFunc = scanner.nextInt();
                     System.out.println("Salario base dos funcionarios: ");
                     double salBase = scanner.nextDouble();
-                    System.out.println("Endereco: ");
-                    String endereco = scanner.next();
+                    System.out.println("Nome da Rua: ");
+                    String nomeRua = scanner.next();
+                    System.out.println("Cidade: ");
+                    String cidade = scanner.next();
+                    System.out.println("Estado: ");
+                    String estado = scanner.next();
+                    System.out.println("Pais: ");
+                    String pais = scanner.next();
+                    System.out.println("Numero: ");
+                    String numero = scanner.next();
+                    System.out.println("CEP: ");
+                    String cep = scanner.next();
+                    System.out.println("Complemento: ");
+                    String complemento = scanner.next();
                     System.out.println("Loja cadastrada! Por favor cadastre um produto em seguida");
                     break;
                 case 2:
