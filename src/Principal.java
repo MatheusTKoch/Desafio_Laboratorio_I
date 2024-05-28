@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int opcao = 0;
 
         while (opcao !=3) {
@@ -10,8 +10,8 @@ public class Principal {
             System.out.println("(2) criar um produto");
             System.out.println("(3) sair");
         
-            if(input.hasNextInt()) {
-                opcao = input.nextInt();
+            if(scanner.hasNextInt()) {
+                opcao = scanner.nextInt();
             
             switch (opcao) {
                 case 1:
@@ -29,10 +29,10 @@ public class Principal {
                 }
             } else {
                 System.out.println("Opção  inválida");
-                input.next();
+                scanner.next();
             }
             System.out.println(); 
         }
-        input.close(); 
+        scanner.close(); 
     }
 }
