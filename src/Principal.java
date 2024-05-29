@@ -4,6 +4,8 @@ public class Principal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
+        boolean lojaCadastrada = false;
+        boolean produtoCadastrado = false;
 
         //usar classe Teclado para refatorar o codigo abaixo ao pedir os inputs
 
@@ -13,9 +15,9 @@ public class Principal {
             switch (opcao) {
                 case 1:
                     System.out.println("Criação da loja");
-                    String nome = Teclado.leString("Nome da Loja: ");
-                    int quantFunc = Teclado.leInt("Quantidade de funcionarios: ");
-                    double salBase = Teclado.leDouble("Salario base dos funcionarios: ");
+                    String nomeLoja = Teclado.leString("Nome da Loja: ");
+                    int quantFuncLoja = Teclado.leInt("Quantidade de funcionarios: ");
+                    double salBaseLoja = Teclado.leDouble("Salario base dos funcionarios: ");
                     String nomeRua = Teclado.leString("Nome da Rua: ");
                     String cidade = Teclado.leString("Cidade: ");
                     String estado = Teclado.leString("Estado: ");
@@ -23,16 +25,23 @@ public class Principal {
                     String cep = Teclado.leString("CEP: ");
                     String numero = Teclado.leString("Numero: ");
                     String complemento = Teclado.leString("Complemento: ");
-                    int dia = Teclado.leInt("Dia da Fundação da loja: ");
-                    int mes = Teclado.leInt("Mes da Fundação da loja: ");
-                    int ano = Teclado.leInt("Ano da Fundação da loja ");
-                    Data dataFund = new Data(dia, mes, ano);
-                    Endereco endereco = new Endereco(nomeRua, cidade, estado, pais, cep, numero, complemento);
-                    Loja loja = new Loja(nome, quantFunc, salBase, endereco, dataFund);
+                    int diaFund = Teclado.leInt("Dia da Fundação da loja: ");
+                    int mesFund = Teclado.leInt("Mes da Fundação da loja: ");
+                    int anoFund = Teclado.leInt("Ano da Fundação da loja ");
+                    Data dataFund = new Data(diaFund, mesFund, anoFund);
+                    Endereco enderecoLoja = new Endereco(nomeRua, cidade, estado, pais, cep, numero, complemento);
+                    Loja loja = new Loja(nomeLoja, quantFuncLoja, salBaseLoja, enderecoLoja, dataFund);
                     System.out.println("Loja cadastrada! Por favor cadastre um produto em seguida");
                     break;
                 case 2:
                     System.out.println("Criação do produto");
+                    String nomeProd = Teclado.leString("Nome do Produto: ");
+                    double precoProd = Teclado.leDouble("Preco do produto: ");
+                    int diaVal = Teclado.leInt("Dia da validade: ");
+                    int mesVal = Teclado.leInt("Mes da validade: ");
+                    int anoVal = Teclado.leInt("Ano da validade: ");
+
+
                     break;
                 case 3:
                     System.out.println("Saindo");
