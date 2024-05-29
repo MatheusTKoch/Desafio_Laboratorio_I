@@ -7,11 +7,12 @@ public class Principal {
         boolean lojaCadastrada = false;
         boolean produtoCadastrado = false;
 
-        //usar classe Teclado para refatorar o codigo abaixo ao pedir os inputs
-
         while (opcao !=3) {
+            if (lojaCadastrada == true && produtoCadastrado == true) {
+                opcao = 3;
+            }
+
             opcao = Teclado.leInt("(1) criar uma loja (2) criar um produto (3) sair  -  ");
-            
             switch (opcao) {
                 case 1:
                     System.out.println("Criação da loja");
@@ -52,6 +53,8 @@ public class Principal {
                 default:
                     System.out.println("Opção  inválida");   
                 }
+
+                
             }
         
         scanner.close(); 
