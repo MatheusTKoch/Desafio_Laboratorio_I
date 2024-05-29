@@ -32,6 +32,7 @@ public class Principal {
                     Endereco enderecoLoja = new Endereco(nomeRua, cidade, estado, pais, cep, numero, complemento);
                     Loja loja = new Loja(nomeLoja, quantFuncLoja, salBaseLoja, enderecoLoja, dataFund);
                     System.out.println("Loja cadastrada! Por favor cadastre um produto em seguida");
+                    lojaCadastrada = true;
                     break;
                 case 2:
                     System.out.println("Criação do produto");
@@ -40,8 +41,10 @@ public class Principal {
                     int diaVal = Teclado.leInt("Dia da validade: ");
                     int mesVal = Teclado.leInt("Mes da validade: ");
                     int anoVal = Teclado.leInt("Ano da validade: ");
-
-
+                    Data dataValidade = new Data(diaVal, mesVal, anoVal);
+                    Produto produto = new Produto(nomeProd, precoProd, dataValidade);
+                    System.out.println("Produto Cadastrado!");
+                    produtoCadastrado = true;
                     break;
                 case 3:
                     System.out.println("Saindo");
