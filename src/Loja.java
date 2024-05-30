@@ -13,9 +13,11 @@ public class Loja {
         this.dataFundacao = dataFundacao;
     }
 
-    public Loja(String nome, int quantidadeFuncionarios) {
+    public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
+        this.endereco = endereco;
+        this.dataFundacao = dataFundacao;
         this.salarioBaseFuncionario = -1;
     }
 

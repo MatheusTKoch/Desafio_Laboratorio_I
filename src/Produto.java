@@ -17,7 +17,7 @@ public class Produto {
         return preco;
     }
 
-    public Data dataValidade() {
+    public Data getDataValidade() {
         return dataValidade;
     }
 
