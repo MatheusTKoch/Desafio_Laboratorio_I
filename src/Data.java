@@ -41,7 +41,7 @@ public class Data {
     }
 
     public String toString() {
-        return "Data: " + dia + "/" + mes + "/" + ano;
+        return dia + "/" + mes + "/" + ano;
     }
 
     public boolean verificaAnoBissexto() {
