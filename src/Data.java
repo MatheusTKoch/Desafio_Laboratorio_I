@@ -1,5 +1,7 @@
 public class Data {
-    private int dia, mes, ano;
+    private int dia;
+    private int mes;
+    private int ano;
 
     public Data(int dia, int mes, int ano) {
         if (dia == 29 && mes == 2 && ano % 4 != 0 || ano % 100 != 0 && ano % 400 != 0) {
