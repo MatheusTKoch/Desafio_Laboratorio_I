@@ -6,9 +6,11 @@ public class Principal {
         int opcao = 0;
         boolean lojaCadastrada = false;
         Data validadePadrao = new Data(20, 10, 2023);
+        Data dataFund = new Data(0, 0, 0);
+        Endereco enderecoLoja =new Endereco(null, null, null, null, null, null, null);
+        Loja loja = new Loja(null, 0);
 
         while (opcao !=3) {
-
             opcao = Teclado.leInt("(1) criar uma loja (2) criar um produto (3) sair  -  ");
             switch (opcao) {
                 case 1:
@@ -26,9 +28,9 @@ public class Principal {
                     int diaFund = Teclado.leInt("Dia da Fundação da loja: ");
                     int mesFund = Teclado.leInt("Mes da Fundação da loja: ");
                     int anoFund = Teclado.leInt("Ano da Fundação da loja ");
-                    Data dataFund = new Data(diaFund, mesFund, anoFund);
-                    Endereco enderecoLoja = new Endereco(nomeRua, cidade, estado, pais, cep, numero, complemento);
-                    Loja loja = new Loja(nomeLoja, quantFuncLoja, salBaseLoja, enderecoLoja, dataFund);
+                    dataFund = new Data(diaFund, mesFund, anoFund);
+                    enderecoLoja = new Endereco(nomeRua, cidade, estado, pais, cep, numero, complemento);
+                    loja = new Loja(nomeLoja, quantFuncLoja, salBaseLoja, enderecoLoja, dataFund);
                     System.out.println("Loja cadastrada! Por favor cadastre um produto em seguida");
                     lojaCadastrada = true;
                     break;
@@ -48,6 +50,9 @@ public class Principal {
                         } else {
                             System.out.println("PRODUTO NÃO VENCIDO");
                         }
+                        System.out.println(loja.toString());
+                        System.out.println(enderecoLoja.toString());
+                        System.out.print("Data de fundacao: " + dataFund.toString());
                         opcao = 3;
                     }
                     break;
@@ -58,7 +63,6 @@ public class Principal {
                     System.out.println("Opção  inválida");   
                 }
             }
-
         scanner.close(); 
     }
 }
