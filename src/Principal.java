@@ -5,7 +5,6 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
         boolean lojaCadastrada = false;
-        boolean produtoCadastrado = false;
         Data validadePadrao = new Data(20, 10, 2023);
 
         while (opcao !=3) {
@@ -43,9 +42,8 @@ public class Principal {
                     Data dataValidade = new Data(diaVal, mesVal, anoVal);
                     Produto produto = new Produto(nomeProd, precoProd, dataValidade);
                     System.out.println("Produto Cadastrado!");
-                    produtoCadastrado = true;
-                    if (lojaCadastrada == true && produtoCadastrado == true) {
-                        if (produto.estaVencido(validadePadrao) == true) {
+                    if (lojaCadastrada) {
+                        if (produto.estaVencido(validadePadrao)) {
                             System.out.println("PRODUTO VENCIDO");
                         } else {
                             System.out.println("PRODUTO NÃO VENCIDO");
@@ -61,8 +59,6 @@ public class Principal {
                 }
             }
 
-            
-        
         scanner.close(); 
     }
 }

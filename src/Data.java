@@ -4,7 +4,7 @@ public class Data {
     private int ano;
 
     public Data(int dia, int mes, int ano) {
-        if (dia == 29 && mes == 2 && ano % 4 != 0 || ano % 100 != 0 && ano % 400 != 0) {
+        if (dia == 29 && mes == 2 && ano % 100 != 0 && ano % 4 == 0 || dia == 29 && mes == 2 && ano % 100 == 0 && ano % 400 == 0) {
             System.out.println("Data inválida!");
             this.dia = 1;
             this.mes = 1;
