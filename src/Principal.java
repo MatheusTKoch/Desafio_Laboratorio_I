@@ -6,11 +6,9 @@ public class Principal {
         int opcao = 0;
         boolean lojaCadastrada = false;
         boolean produtoCadastrado = false;
+        Data validadePadrao = new Data(20, 10, 2023);
 
         while (opcao !=3) {
-            if (lojaCadastrada == true && produtoCadastrado == true) {
-                opcao = 3;
-            }
 
             opcao = Teclado.leInt("(1) criar uma loja (2) criar um produto (3) sair  -  ");
             switch (opcao) {
@@ -46,6 +44,14 @@ public class Principal {
                     Produto produto = new Produto(nomeProd, precoProd, dataValidade);
                     System.out.println("Produto Cadastrado!");
                     produtoCadastrado = true;
+                    if (lojaCadastrada == true && produtoCadastrado == true) {
+                        if (produto.estaVencido(validadePadrao) == true) {
+                            System.out.println("PRODUTO VENCIDO");
+                        } else {
+                            System.out.println("PRODUTO NÃO VENCIDO");
+                        }
+                        opcao = 3;
+                    }
                     break;
                 case 3:
                     System.out.println("Saindo");
@@ -53,9 +59,9 @@ public class Principal {
                 default:
                     System.out.println("Opção  inválida");   
                 }
-
-                
             }
+
+            
         
         scanner.close(); 
     }
