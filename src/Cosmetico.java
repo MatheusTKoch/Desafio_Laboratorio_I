@@ -14,5 +14,7 @@ public class Cosmetico extends Loja {
         this.taxaComercializacao = taxaComercializacao;
     }
 
-    
+    public String toString() {
+        return "Nome da loja: " + getNome() + ", Quantidade de funcionários: " + getQuantidadeFuncionarios() + ", Salário Base dos Funcionários: " + getSalarioBaseFuncionario() + ". " + getEndereco() + "Data de fundação: " + getDataFundacao() + "Taxa de Comercialização: " + taxaComercializacao; 
+    }
 }
