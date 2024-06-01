@@ -62,7 +62,7 @@ public class Loja {
     }
 
     public String toString() {
-        return "Nome da loja: " + nome + ", Quantidade de funcionários: " + quantidadeFuncionarios + ", Salário Base dos Funcionários: " + salarioBaseFuncionario + ". " + endereco.toString() + "Data de fundação: " + dataFundacao.toString();
+        return "Nome da loja: " + nome + ", Quantidade de funcionários: " + quantidadeFuncionarios + ", Salário Base dos Funcionários: " + salarioBaseFuncionario + ". " + endereco + " Data de fundação: " + dataFundacao;
     }
 
     public double gastosComSalario() {

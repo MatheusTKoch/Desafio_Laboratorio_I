@@ -51,8 +51,6 @@ public class Principal {
                             System.out.println("PRODUTO NÃO VENCIDO");
                         }
                         System.out.println(loja.toString());
-                        System.out.println(enderecoLoja.toString());
-                        System.out.print("Data de fundação: " + dataFund.toString());
                         opcao = 3;
                     }
                     break;
