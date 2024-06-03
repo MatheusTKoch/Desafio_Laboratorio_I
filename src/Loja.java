@@ -4,27 +4,24 @@ public class Loja {
     private double salarioBaseFuncionario;
     private Endereco endereco;
     private Data dataFundacao;
-    private int quantidadeMaxima;
     private Produto[] estoqueProdutos;
 
-    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, int quantidadeMaxima) {
+    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, int quantMaxProdutos) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
         this.endereco = endereco;
         this.dataFundacao = dataFundacao;
-        this.quantidadeMaxima = quantidadeMaxima;
-        this.estoqueProdutos = new Produto[quantidadeMaxima];
+        this.estoqueProdutos = new Produto[quantMaxProdutos];
     }
 
-    public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao, int quantidadeMaxima) {
+    public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao, int quantMaxProdutos) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.endereco = endereco;
         this.dataFundacao = dataFundacao;
         this.salarioBaseFuncionario = -1;
-        this.quantidadeMaxima = quantidadeMaxima;
-        this.estoqueProdutos = new Produto[quantidadeMaxima];
+        this.estoqueProdutos = new Produto[quantMaxProdutos];
     }
 
     public String getNome() {
