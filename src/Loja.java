@@ -5,7 +5,7 @@ public class Loja {
     private Endereco endereco;
     private Data dataFundacao;
     private int quantidadeMaxima;
-    private Produto[] estoqueProdutos = new Produto[quantidadeMaxima];
+    private Produto[] estoqueProdutos;
 
     public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, int quantidadeMaxima) {
         this.nome = nome;
@@ -14,6 +14,7 @@ public class Loja {
         this.endereco = endereco;
         this.dataFundacao = dataFundacao;
         this.quantidadeMaxima = quantidadeMaxima;
+        this.estoqueProdutos = new Produto[quantidadeMaxima];
     }
 
     public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao, int quantidadeMaxima) {
@@ -23,6 +24,7 @@ public class Loja {
         this.dataFundacao = dataFundacao;
         this.salarioBaseFuncionario = -1;
         this.quantidadeMaxima = quantidadeMaxima;
+        this.estoqueProdutos = new Produto[quantidadeMaxima];
     }
 
     public String getNome() {
