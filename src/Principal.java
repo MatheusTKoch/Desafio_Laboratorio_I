@@ -8,7 +8,7 @@ public class Principal {
         Data validadePadrao = new Data(20, 10, 2023);
         Data dataFund = new Data(0, 0, 0);
         Endereco enderecoLoja =new Endereco(null, null, null, null, null, null, null);
-        Loja loja = new Loja(null, 0, enderecoLoja, dataFund, quantMaxProdutos);
+        Loja loja = new Loja(null, 0, enderecoLoja, dataFund, 0);
 
         while (opcao !=3) {
             opcao = Teclado.leInt("(1) criar uma loja (2) criar um produto (3) sair  -  ");
@@ -18,6 +18,7 @@ public class Principal {
                     String nomeLoja = Teclado.leString("Nome da Loja: ");
                     int quantFuncLoja = Teclado.leInt("Quantidade de funcionarios: ");
                     double salBaseLoja = Teclado.leDouble("Salario base dos funcionarios: ");
+                    int quantMaxProdutos = Teclado.leInt("Quantidade maxima de produtos em estoque: ");
                     String nomeRua = Teclado.leString("Nome da Rua: ");
                     String cidade = Teclado.leString("Cidade: ");
                     String estado = Teclado.leString("Estado: ");
