@@ -8,7 +8,7 @@ public class Principal {
         Data validadePadrao = new Data(20, 10, 2023);
         Data dataFund = new Data(0, 0, 0);
         Endereco enderecoLoja =new Endereco(null, null, null, null, null, null, null);
-        Loja loja = new Loja(null, 0, enderecoLoja, dataFund);
+        Loja loja = new Loja(null, 0, enderecoLoja, dataFund, quantMaxProdutos);
 
         while (opcao !=3) {
             opcao = Teclado.leInt("(1) criar uma loja (2) criar um produto (3) sair  -  ");
@@ -30,7 +30,7 @@ public class Principal {
                     int anoFund = Teclado.leInt("Ano da Fundação da loja ");
                     dataFund = new Data(diaFund, mesFund, anoFund);
                     enderecoLoja = new Endereco(nomeRua, cidade, estado, pais, cep, numero, complemento);
-                    loja = new Loja(nomeLoja, quantFuncLoja, salBaseLoja, enderecoLoja, dataFund);
+                    loja = new Loja(nomeLoja, quantFuncLoja, salBaseLoja, enderecoLoja, dataFund, quantMaxProdutos);
                     System.out.println("Loja cadastrada! Por favor cadastre um produto em seguida");
                     lojaCadastrada = true;
                     break;
