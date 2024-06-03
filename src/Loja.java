@@ -47,6 +47,10 @@ public class Loja {
         return dataFundacao;
     }
 
+    public Produto[] getEstoqueProdutos() {
+        return estoqueProdutos;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -67,8 +71,12 @@ public class Loja {
         this.dataFundacao = dataFundacao;
     }
 
+    public void setEstoqueProdutos(Produto[] estoqueProdutos) {
+        this.estoqueProdutos = estoqueProdutos;
+    }
+
     public String toString() {
-        return "Nome da loja: " + nome + ", Quantidade de funcionários: " + quantidadeFuncionarios + ", Salário Base dos Funcionários: " + salarioBaseFuncionario + ". " + endereco + " Data de fundação: " + dataFundacao;
+        return "Nome da loja: " + nome + ", Quantidade de funcionários: " + quantidadeFuncionarios + ", Salário Base dos Funcionários: " + salarioBaseFuncionario + ". " + endereco + " Data de fundação: " + dataFundacao + " Estoque de produtos: " + estoqueProdutos;
     }
 
     public double gastosComSalario() {
