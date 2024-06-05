@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Loja {
     private String nome;
     private int quantidadeFuncionarios;
@@ -72,8 +74,34 @@ public class Loja {
         this.estoqueProdutos = estoqueProdutos;
     }
 
+    public boolean insereProduto(Produto produto) {
+        boolean inserido = false;
+        for (int i = 0; i < estoqueProdutos.length; i++) {
+            if (estoqueProdutos[i] == null) {
+                estoqueProdutos[i] = produto;
+                inserido = true;
+            }
+        }
+        return inserido;
+    }
+
+    public boolean removeProduto(String nomeProduto) {
+        boolean removido = false;
+        for (int i = 0; i < estoqueProdutos.length; i++) {
+            if (estoqueProdutos[i].getNome() == nomeProduto) {
+                estoqueProdutos[i] = null;
+                removido = true;
+            }
+        }
+        return removido;
+    }
+
     public String toString() {
         return "Nome da loja: " + nome + ", Quantidade de funcionários: " + quantidadeFuncionarios + ", Salário Base dos Funcionários: " + salarioBaseFuncionario + ". " + endereco + " Data de fundação: " + dataFundacao + " Estoque de produtos: " + estoqueProdutos;
+    }
+
+    public String imprimeProdutos() {
+        return "Produtos cadastrados: " + Arrays.toString(estoqueProdutos);
     }
 
     public double gastosComSalario() {
