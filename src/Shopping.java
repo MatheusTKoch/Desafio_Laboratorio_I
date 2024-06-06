@@ -64,7 +64,7 @@ public class Shopping {
     public int quantidadeLojasPorTipo(String tipoLoja) {
         int correspondencias = 0;
         for (int i = 0; i < lojas.length; i++) {
-            if (lojas[i].getNome().equals(tipoLoja)) {
+            if (lojas[i].getClass().getSimpleName().equals(tipoLoja)) {
                 correspondencias ++;
             }
         }
@@ -74,4 +74,14 @@ public class Shopping {
             return correspondencias;
         }
     }
+
+    // public Loja lojaSeguroMaisCaro() {
+    //     Loja lojaComMaiorSeguro;
+    //     int maiorSeguro = 0;
+    //     for (int i = 0; i < lojas.length; i++) {
+    //         if(lojas[i].getClass().getSimpleName().equals("Informatica")) {
+    //             lojas[i].seguroEletronicos
+    //         }
+    //     }
+    // }
 }
