@@ -49,4 +49,17 @@ public class Shopping {
         }
         return lojaAdicionada;
     }
+
+    public boolean removeLoja(String nome) {
+        boolean lojaRemovida = false;
+        for (int i = 0; i < lojas.length; i++) {
+            if (lojas[i].getNome() == nome) {
+                lojas[i] = null;
+                lojaRemovida = true;
+            }
+        }
+        return lojaRemovida;
+    }
+
+    
 }
