@@ -53,7 +53,7 @@ public class Shopping {
     public boolean removeLoja(String nome) {
         boolean lojaRemovida = false;
         for (int i = 0; i < lojas.length; i++) {
-            if (lojas[i].getNome() == nome) {
+            if (lojas[i].getNome().equals(nome)) {
                 lojas[i] = null;
                 lojaRemovida = true;
             }
@@ -61,5 +61,17 @@ public class Shopping {
         return lojaRemovida;
     }
 
-    
+    public int quantidadeLojasPorTipo(String tipoLoja) {
+        int correspondencias = 0;
+        for (int i = 0; i < lojas.length; i++) {
+            if (lojas[i].getNome().equals(tipoLoja)) {
+                correspondencias ++;
+            }
+        }
+        if (correspondencias == 0) {
+            return -1;
+        } else {
+            return correspondencias;
+        }
+    }
 }
