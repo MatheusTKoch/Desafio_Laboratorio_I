@@ -75,13 +75,18 @@ public class Shopping {
         }
     }
 
-    // public Loja lojaSeguroMaisCaro() {
-    //     Loja lojaComMaiorSeguro;
-    //     int maiorSeguro = 0;
-    //     for (int i = 0; i < lojas.length; i++) {
-    //         if(lojas[i].getClass().getSimpleName().equals("Informatica")) {
-    //             lojas[i].seguroEletronicos
-    //         }
-    //     }
-    // }
+    public Informatica lojaSeguroMaisCaro() {
+        Informatica lojaComMaiorSeguro = null;
+        double maiorSeguro = 0;
+        for (int i = 0; i < lojas.length; i++) {
+            if(lojas[i] instanceof Informatica) {
+                Informatica lojaInformatica = (Informatica) lojas[i];
+                if (lojaInformatica.getSeguroEletronicos() > maiorSeguro) {
+                    maiorSeguro = lojaInformatica.getSeguroEletronicos();
+                    lojaComMaiorSeguro = lojaInformatica;
+                }
+            }
+        }
+        return lojaComMaiorSeguro;
+    }
 }
