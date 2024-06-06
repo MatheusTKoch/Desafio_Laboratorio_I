@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Shopping {
     private String nome;
     private Endereco endereco;
@@ -33,5 +35,7 @@ public class Shopping {
         this.lojas = lojas;
     }
 
-    
+    public String toString() {
+        return "Nome do Shopping: " + nome + " .Endereco: " + endereco + ". Conjunto de Lojas" + Arrays.toString(lojas);
+    }
 }

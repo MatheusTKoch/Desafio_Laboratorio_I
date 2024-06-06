@@ -97,7 +97,7 @@ public class Loja {
     }
 
     public String toString() {
-        return "Nome da loja: " + nome + ", Quantidade de funcionários: " + quantidadeFuncionarios + ", Salário Base dos Funcionários: " + salarioBaseFuncionario + ". " + endereco + " Data de fundação: " + dataFundacao + " Estoque de produtos: " + estoqueProdutos;
+        return "Nome da loja: " + nome + ", Quantidade de funcionários: " + quantidadeFuncionarios + ", Salário Base dos Funcionários: " + salarioBaseFuncionario + ". " + endereco + " Data de fundação: " + dataFundacao + " Estoque de produtos: " + Arrays.toString(estoqueProdutos);
     }
 
     public String imprimeProdutos() {
