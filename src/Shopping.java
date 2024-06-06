@@ -8,4 +8,30 @@ public class Shopping {
         this.endereco = endereco;
         this.lojas = new Loja[quantMaxLojas];
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public Loja[] getLojas() {
+        return lojas;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setLojas(Loja[] lojas) {
+        this.lojas = lojas;
+    }
+
+    
 }
