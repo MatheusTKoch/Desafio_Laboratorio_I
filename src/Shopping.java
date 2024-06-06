@@ -38,4 +38,15 @@ public class Shopping {
     public String toString() {
         return "Nome do Shopping: " + nome + " .Endereco: " + endereco + ". Conjunto de Lojas" + Arrays.toString(lojas);
     }
+
+    public boolean insereLoja(Loja loja) {
+        boolean lojaAdicionada = false;
+        for (int i = 0; i < lojas.length; i++) {
+            if (lojas[i] == null) {
+                lojas[i] = loja;
+                lojaAdicionada = false;
+            }
+        }
+        return lojaAdicionada;
+    }
 }
