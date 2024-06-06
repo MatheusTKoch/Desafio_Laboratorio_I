@@ -62,16 +62,44 @@ public class Shopping {
     }
 
     public int quantidadeLojasPorTipo(String tipoLoja) {
+        boolean inputValido = true;
         int correspondencias = 0;
         for (int i = 0; i < lojas.length; i++) {
-            if (lojas[i].getClass().getSimpleName().equals(tipoLoja)) {
-                correspondencias ++;
+            switch (tipoLoja) {
+                case "Cosmetico":
+                    if (lojas[i] instanceof Cosmetico) {
+                        correspondencias ++;
+                    }
+                    break;
+                case "Vestuario":
+                    if (lojas[i] instanceof Vestuario) {
+                        correspondencias ++;
+                    }
+                    break;
+                case "Bijuteria":
+                    if (lojas[i] instanceof Bijuteria) {
+                        correspondencias ++;
+                    }
+                    break;
+                case "Alimentacao":
+                    if (lojas[i] instanceof Alimentacao) {
+                        correspondencias ++;
+                    }
+                    break;
+                case "Informatica":
+                    if (lojas[i] instanceof Informatica) {
+                        correspondencias ++;
+                    }
+                    break;
+                default:
+                    inputValido = false;
+                    break; 
             }
         }
-        if (correspondencias == 0) {
-            return -1;
-        } else {
+        if (inputValido) {
             return correspondencias;
+        } else {
+            return -1;
         }
     }
 
