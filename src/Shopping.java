@@ -55,6 +55,8 @@ public class Shopping {
             if (lojas[i].getNome().equals(nome)) {
                 lojas[i] = null;
                 lojaRemovida = true;
+            } else if (lojas[i] == null) {
+                lojaRemovida = false;
             }
         }
         return lojaRemovida;
