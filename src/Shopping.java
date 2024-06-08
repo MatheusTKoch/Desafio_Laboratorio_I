@@ -40,14 +40,13 @@ public class Shopping {
     }
 
     public boolean insereLoja(Loja loja) {
-        boolean lojaAdicionada = false;
         for (int i = 0; i < lojas.length; i++) {
             if (lojas[i] == null) {
                 lojas[i] = loja;
-                lojaAdicionada = false;
+                return true;
             }
         }
-        return lojaAdicionada;
+        return false;
     }
 
     public boolean removeLoja(String nome) {
