@@ -63,46 +63,84 @@ public class Shopping {
     }
 
     public int quantidadeLojasPorTipo(String tipoLoja) {
-        boolean inputValido = true;
         int correspondencias = 0;
-        for (int i = 0; i < lojas.length; i++) {
-            switch (tipoLoja) {
-                case "Cosmetico":
-                    if (lojas[i] instanceof Cosmetico) {
-                        correspondencias ++;
-                    }
-                    break;
-                case "Vestuario":
-                    if (lojas[i] instanceof Vestuario) {
-                        correspondencias ++;
-                    }
-                    break;
-                case "Bijuteria":
-                    if (lojas[i] instanceof Bijuteria) {
-                        correspondencias ++;
-                    }
-                    break;
-                case "Alimentacao":
-                    if (lojas[i] instanceof Alimentacao) {
-                        correspondencias ++;
-                    }
-                    break;
-                case "Informatica":
-                    if (lojas[i] instanceof Informatica) {
-                        correspondencias ++;
-                    }
-                    break;
-                default:
-                    inputValido = false;
-                    break; 
+        for (Loja loja : lojas) {
+            if (loja != null) {
+                switch (tipoLoja.toLowerCase()) {
+                    case "cosmético":
+                        if (loja instanceof Cosmetico) {
+                            correspondencias++;
+                        }
+                        break;
+                    case "vestuário":
+                        if (loja instanceof Vestuario) { 
+                            correspondencias++;
+                        }
+                        break;
+                    case "bijuteria":
+                        if (loja instanceof Bijuteria) {
+                            correspondencias++;
+                        } 
+                        break;
+                    case "alimentação":
+                        if (loja instanceof Alimentacao) {
+                            correspondencias++;
+                        }
+                        break;
+                    case "informática":
+                        if (loja instanceof Informatica) {
+                            correspondencias++;
+                        }
+                        break;
+                    default:
+                        return -1;
+                }
             }
         }
-        if (inputValido) {
-            return correspondencias;
-        } else {
-            return -1;
-        }
+        return correspondencias;
     }
+
+    // public int quantidadeLojasPorTipo(String tipoLoja) {
+    //     boolean inputValido = true;
+    //     int correspondencias = 0;
+    //     for (int i = 0; i < lojas.length; i++) {
+    //         switch (tipoLoja) {
+    //             case "Cosmetico":
+    //                 if (lojas[i] instanceof Cosmetico) {
+    //                     correspondencias ++;
+    //                 }
+    //                 break;
+    //             case "Vestuario":
+    //                 if (lojas[i] instanceof Vestuario) {
+    //                     correspondencias ++;
+    //                 }
+    //                 break;
+    //             case "Bijuteria":
+    //                 if (lojas[i] instanceof Bijuteria) {
+    //                     correspondencias ++;
+    //                 }
+    //                 break;
+    //             case "Alimentacao":
+    //                 if (lojas[i] instanceof Alimentacao) {
+    //                     correspondencias ++;
+    //                 }
+    //                 break;
+    //             case "Informatica":
+    //                 if (lojas[i] instanceof Informatica) {
+    //                     correspondencias ++;
+    //                 }
+    //                 break;
+    //             default:
+    //                 inputValido = false;
+    //                 break; 
+    //         }
+    //     }
+    //     if (inputValido) {
+    //         return correspondencias;
+    //     } else {
+    //         return -1;
+    //     }
+    // }
 
     public Informatica lojaSeguroMaisCaro() {
         Informatica lojaComMaiorSeguro = null;
