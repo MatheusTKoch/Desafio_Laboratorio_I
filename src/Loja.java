@@ -75,25 +75,26 @@ public class Loja {
     }
 
     public boolean insereProduto(Produto produto) {
-        boolean inserido = false;
+        boolean produtoAdicionado = false;
         for (int i = 0; i < estoqueProdutos.length; i++) {
-            if (estoqueProdutos[i] == null) {
+            if (estoqueProdutos[i] != null) {
+                produtoAdicionado = false;
+            } else {
                 estoqueProdutos[i] = produto;
-                inserido = true;
+                return true;
             }
         }
-        return inserido;
+        return produtoAdicionado;
     }
 
     public boolean removeProduto(String nomeProduto) {
-        boolean removido = false;
         for (int i = 0; i < estoqueProdutos.length; i++) {
-            if (estoqueProdutos[i].getNome() == nomeProduto) {
+            if (estoqueProdutos[i] != null && estoqueProdutos[i].getNome() == nomeProduto) {
                 estoqueProdutos[i] = null;
-                removido = true;
+                return true;
             }
         }
-        return removido;
+        return false;
     }
 
     public String toString() {
