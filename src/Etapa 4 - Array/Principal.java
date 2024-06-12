@@ -10,8 +10,10 @@ public class Principal {
         Endereco enderecoLoja =new Endereco(null, null, null, null, null, null, null);
         Loja loja = new Loja(null, 0, enderecoLoja, dataFund, 0);
 
+
+        System.out.println("\n" + "***********************" + "\n" + "* Gerenciamento do Shopping Center: *" + "\n" + "***********************" + "\n");
         while (opcao !=3) {
-            opcao = Teclado.leInt("(1) criar uma loja (2) criar um produto (3) sair  -  ");
+            opcao = Teclado.leInt("\n" + "(1) criar uma loja (2) criar um produto (3) sair  -  ");
             switch (opcao) {
                 case 1:
                     System.out.println("Criação da loja");
