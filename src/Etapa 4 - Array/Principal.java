@@ -56,13 +56,13 @@ public class Principal {
                     int anoVal = Teclado.leInt("****** Ano da validade: ");
                     Data dataValidade = new Data(diaVal, mesVal, anoVal);
                     produto = new Produto(nomeProd, precoProd, dataValidade);
-                    loja.insereProduto(produto);
-                    System.out.println("Produto Cadastrado e adicionado ao estoque!");
+                    System.out.println("Produto Cadastrado!");
                     if (lojaCadastrada) {
+                        System.out.println("Verificado validade do produto em 20/10/2023: ");
                         if (produto.estaVencido(validadePadrao)) {
-                            System.out.println("PRODUTO VENCIDO");
+                            System.out.println("\n" + "PRODUTO VENCIDO" + "\n");
                         } else {
-                            System.out.println("PRODUTO NÃO VENCIDO");
+                            System.out.println("\n" + "PRODUTO NÃO VENCIDO" + "\n");
                         }
                         System.out.println(loja.toString());
                         opcao = 3;
@@ -72,7 +72,7 @@ public class Principal {
                     System.out.println("Saindo");
                     break;
                 default:
-                    System.out.println("Opção  inválida");   
+                    System.out.println("Opção inválida");   
                 }
             }
         scanner.close(); 
