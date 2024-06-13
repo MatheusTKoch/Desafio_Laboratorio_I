@@ -17,20 +17,20 @@ public class Principal {
             switch (opcao) {
                 case 1:
                     System.out.println("Criação da loja");
-                    String nomeLoja = Teclado.leString("Nome da Loja: ");
-                    int quantFuncLoja = Teclado.leInt("Quantidade de funcionarios: ");
-                    double salBaseLoja = Teclado.leDouble("Salario base dos funcionarios: ");
-                    int quantMaxProdutos = Teclado.leInt("Quantidade maxima de produtos em estoque: ");
-                    String nomeRua = Teclado.leString("Nome da Rua: ");
-                    String cidade = Teclado.leString("Cidade: ");
-                    String estado = Teclado.leString("Estado: ");
-                    String pais = Teclado.leString("Pais: ");
-                    String cep = Teclado.leString("CEP: ");
-                    String numero = Teclado.leString("Numero: ");
-                    String complemento = Teclado.leString("Complemento: ");
-                    int diaFund = Teclado.leInt("Dia da Fundação da loja: ");
-                    int mesFund = Teclado.leInt("Mes da Fundação da loja: ");
-                    int anoFund = Teclado.leInt("Ano da Fundação da loja ");
+                    String nomeLoja = Teclado.leString("****** Nome da Loja: ");
+                    int quantFuncLoja = Teclado.leInt("****** Quantidade de funcionarios: ");
+                    double salBaseLoja = Teclado.leDouble("****** Salario base dos funcionarios: ");
+                    int quantMaxProdutos = Teclado.leInt("****** Quantidade maxima de produtos em estoque: ");
+                    String nomeRua = Teclado.leString("****** Nome da Rua: ");
+                    String cidade = Teclado.leString("****** Cidade: ");
+                    String estado = Teclado.leString("****** Estado: ");
+                    String pais = Teclado.leString("****** Pais: ");
+                    String cep = Teclado.leString("****** CEP: ");
+                    String numero = Teclado.leString("****** Numero: ");
+                    String complemento = Teclado.leString("****** Complemento: ");
+                    int diaFund = Teclado.leInt("****** Dia da Fundação da loja: ");
+                    int mesFund = Teclado.leInt("****** Mes da Fundação da loja: ");
+                    int anoFund = Teclado.leInt("****** Ano da Fundação da loja ");
                     dataFund = new Data(diaFund, mesFund, anoFund);
                     enderecoLoja = new Endereco(nomeRua, cidade, estado, pais, cep, numero, complemento);
                     loja = new Loja(nomeLoja, quantFuncLoja, salBaseLoja, enderecoLoja, dataFund, quantMaxProdutos);
@@ -39,11 +39,11 @@ public class Principal {
                     break;
                 case 2:
                     System.out.println("Criação do produto");
-                    String nomeProd = Teclado.leString("Nome do Produto: ");
-                    double precoProd = Teclado.leDouble("Preco do produto: ");
-                    int diaVal = Teclado.leInt("Dia da validade: ");
-                    int mesVal = Teclado.leInt("Mes da validade: ");
-                    int anoVal = Teclado.leInt("Ano da validade: ");
+                    String nomeProd = Teclado.leString("****** Nome do Produto: ");
+                    double precoProd = Teclado.leDouble("****** Preco do produto: ");
+                    int diaVal = Teclado.leInt("****** Dia da validade: ");
+                    int mesVal = Teclado.leInt("****** Mes da validade: ");
+                    int anoVal = Teclado.leInt("****** Ano da validade: ");
                     Data dataValidade = new Data(diaVal, mesVal, anoVal);
                     Produto produto = new Produto(nomeProd, precoProd, dataValidade);
                     System.out.println("Produto Cadastrado!");
