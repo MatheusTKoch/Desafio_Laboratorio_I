@@ -37,6 +37,7 @@ public class Principal {
                     System.out.println("Loja cadastrada!");
                     lojaCadastrada = true;
                     if (produto.getNome() != null) {
+                        System.out.println("Verificado validade do produto em 20/10/2023: ");
                         if (produto.estaVencido(validadePadrao)) {
                             System.out.println("\n" + "PRODUTO VENCIDO" + "\n");
                         } else {
@@ -55,7 +56,8 @@ public class Principal {
                     int anoVal = Teclado.leInt("****** Ano da validade: ");
                     Data dataValidade = new Data(diaVal, mesVal, anoVal);
                     produto = new Produto(nomeProd, precoProd, dataValidade);
-                    System.out.println("Produto Cadastrado!");
+                    loja.insereProduto(produto);
+                    System.out.println("Produto Cadastrado e adicionado ao estoque!");
                     if (lojaCadastrada) {
                         if (produto.estaVencido(validadePadrao)) {
                             System.out.println("PRODUTO VENCIDO");
