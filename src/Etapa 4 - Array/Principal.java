@@ -9,7 +9,7 @@ public class Principal {
         Data dataFund = new Data(0, 0, 0);
         Endereco enderecoLoja =new Endereco(null, null, null, null, null, null, null);
         Loja loja = new Loja(null, 0, enderecoLoja, dataFund, 0);
-
+        Produto produto = new Produto(null, opcao, validadePadrao);
 
         System.out.println("\n" + "***********************" + "\n" + "* Gerenciamento do Shopping Center: *" + "\n" + "***********************" + "\n");
         while (opcao !=3) {
@@ -34,8 +34,17 @@ public class Principal {
                     dataFund = new Data(diaFund, mesFund, anoFund);
                     enderecoLoja = new Endereco(nomeRua, cidade, estado, pais, cep, numero, complemento);
                     loja = new Loja(nomeLoja, quantFuncLoja, salBaseLoja, enderecoLoja, dataFund, quantMaxProdutos);
-                    System.out.println("Loja cadastrada! Por favor cadastre um produto em seguida");
+                    System.out.println("Loja cadastrada!");
                     lojaCadastrada = true;
+                    if (produto.getNome() != null) {
+                        if (produto.estaVencido(validadePadrao)) {
+                            System.out.println("\n" + "PRODUTO VENCIDO" + "\n");
+                        } else {
+                            System.out.println("\n" + "PRODUTO NÃO VENCIDO" + "\n");
+                        }
+                        System.out.println(loja.toString());
+                        opcao = 3;
+                    }
                     break;
                 case 2:
                     System.out.println("Criação do produto");
@@ -45,7 +54,7 @@ public class Principal {
                     int mesVal = Teclado.leInt("****** Mes da validade: ");
                     int anoVal = Teclado.leInt("****** Ano da validade: ");
                     Data dataValidade = new Data(diaVal, mesVal, anoVal);
-                    Produto produto = new Produto(nomeProd, precoProd, dataValidade);
+                    produto = new Produto(nomeProd, precoProd, dataValidade);
                     System.out.println("Produto Cadastrado!");
                     if (lojaCadastrada) {
                         if (produto.estaVencido(validadePadrao)) {
