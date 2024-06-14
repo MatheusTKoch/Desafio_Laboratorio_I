@@ -18,9 +18,9 @@ public class Principal {
                 case 1:
                     System.out.println("Criação da loja");
                     String nomeLoja = Teclado.leString("****** Nome da Loja: ");
-                    int quantFuncLoja = Teclado.leInt("****** Quantidade de funcionarios: ");
-                    double salBaseLoja = Teclado.leDouble("****** Salario base dos funcionarios: ");
-                    int quantMaxProdutos = Teclado.leInt("****** Quantidade maxima de produtos em estoque: ");
+                    int quantFuncLoja = Teclado.leInt("****** Quantidade de funcionários: ");
+                    double salBaseLoja = Teclado.leDouble("****** Salario base dos funcionários: ");
+                    int quantMaxProdutos = Teclado.leInt("****** Quantidade máxima de produtos em estoque: ");
                     String nomeRua = Teclado.leString("****** Nome da Rua: ");
                     String cidade = Teclado.leString("****** Cidade: ");
                     String estado = Teclado.leString("****** Estado: ");
@@ -37,7 +37,7 @@ public class Principal {
                     System.out.println("Loja cadastrada!");
                     lojaCadastrada = true;
                     if (produto.getNome() != null) {
-                        System.out.println("Verificado validade do produto em 20/10/2023: ");
+                        System.out.println("Verificada validade do produto em 20/10/2023: ");
                         if (produto.estaVencido(validadePadrao)) {
                             System.out.println("\n" + "PRODUTO VENCIDO" + "\n");
                         } else {
@@ -58,7 +58,7 @@ public class Principal {
                     produto = new Produto(nomeProd, precoProd, dataValidade);
                     System.out.println("Produto Cadastrado!");
                     if (lojaCadastrada) {
-                        System.out.println("Verificado validade do produto em 20/10/2023: ");
+                        System.out.println("Verificada validade do produto em 20/10/2023: ");
                         if (produto.estaVencido(validadePadrao)) {
                             System.out.println("\n" + "PRODUTO VENCIDO" + "\n");
                         } else {
